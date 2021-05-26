@@ -153,6 +153,10 @@ p {
 .section {
   text-align: center;
   padding: 50px;
+  margin: auto;
+}
+
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -212,4 +216,49 @@ p {
 }
 #about .job .job__period {
   font-size: var(--font-micro);
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-yellow);
+}
+#skills .skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+#skills .skillset .skill .skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+#skills .skillset .skillset__title {
+  color: var(--color-white);
+}
+#skills .skillset .skillset__left .skill {
+  margin-bottom: 32px;
+}
+#skills .skillset .skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+#skills .skillset .skillset__left .skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+#skills .skillset .skillset__left .skill__bar .skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+#skills .skillset .skillset__right {
+  flex-basis: 40%;
+}
+#skills .skillset .skillset__right .tools {
+  background-color: var(--color-grey);
+}
+#skills .skillset .skillset__right .tools,
+#skills .skillset .skillset__right .etc {
+  padding: 20px;
 }
