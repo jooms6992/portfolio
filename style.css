@@ -94,12 +94,31 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-pink);
-  color: var(--color-white);
+  background-color: transparent;
+  color: var(--color-black);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 9999;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
+}
+#navbar.navbar--dark .navbar__menu .navbar__menu__item {
+  color: var(--color-white);
+}
+#navbar.navbar--dark .navbar__menu .navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
+}
+#navbar.navbar--dark .navbar__logo a,
+#navbar.navbar--dark .navbar__logo i {
+  color: var(--color-white);
 }
 #navbar .navbar__menu {
   display: flex;
@@ -111,10 +130,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 #navbar .navbar__menu .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-black);
 }
 #navbar .navbar__menu .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-orange);
 }
 #navbar .navbar__logo {
   display: flex;
@@ -123,6 +142,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 #navbar .navbar__logo a {
+  color: var(--color-black);
   margin-left: 8px;
 }
 
@@ -139,6 +159,7 @@ p {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 #home .home__avatar {
