@@ -161,7 +161,9 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+  opacity: 1;
 }
+
 #home .home__avatar {
   width: 250px;
   height: 250px;

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
-  <body>
+  <body class="body">
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
@@ -48,16 +48,18 @@
     </nav>
     <!-- Home -->
     <section id="home">
-      <img
-        src="imgs/profile-img.JPG"
-        alt="Jooms' profile photo"
-        class="home__avatar"
-      />
-      <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
-      <h2 class="home__description">
-        A Software Engineer currently residing in Sydney, Austrailia
-      </h2>
-      <button class="home__contact" data-link="#contact">Contact Me</button>
+      <div class="home__container">
+        <img
+          src="imgs/profile-img.JPG"
+          alt="Jooms' profile photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
+        <h2 class="home__description">
+          A Software Engineer currently residing in Sydney, Austrailia
+        </h2>
+        <button class="home__contact" data-link="#contact">Contact Me</button>
+      </div>
     </section>
     <!-- About -->
     <section id="about" class="section section__container">
