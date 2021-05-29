@@ -92,3 +92,35 @@ document.addEventListener("scroll", () => {
 //     prevRatio = entry.intersectionRatio;
 //   });
 // }
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// // Show "arrow up" button when scrolling down
+// const showUpArea = document.querySelectorAll(".arrow-up-area");
+// const arrowUp = document.querySelector(".arrow-up");
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.intersectionRatio > 0) {
+//       arrowUp.classList.add("visible");
+//     } else {
+//       arrowUp.classList.remove("visible");
+//     }
+//   });
+// });
+
+// showUpArea.forEach((area) => {
+//   observer.observe(area);
+// });
+
+// Handle click on "Arrow Up" button on home
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
