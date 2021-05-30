@@ -9,6 +9,7 @@ document.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("navbar--dark");
   }
+  navbarMenu.classList.remove("open");
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -19,7 +20,15 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle click on "contact me" button on home
@@ -32,7 +41,7 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
-
+// Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
