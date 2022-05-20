@@ -1,2 +1,2 @@
-# it's clone coding
+# it's a clone coding
  Jooms' portfolio
